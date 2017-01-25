@@ -1,3 +1,5 @@
+/* Typography */
+
 body {
 	font-size: 26px;
 }
@@ -6,6 +8,13 @@ body {
 	font-size: 32px;
 }
 
+body a {
+	font-weight: normal;
+}
+
+blockquote cite {
+	float: right;
+}
 
 /* definition lists*/
 
