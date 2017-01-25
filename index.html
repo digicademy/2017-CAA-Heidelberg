@@ -96,14 +96,15 @@
             <h2>Table of Contents</h2>
             <ol class="line-height-one-five">
                 <li>
-                    One
+                    Organisatorisches
                 </li>
                 <li>
-                    Two
+                    Was ist Netzwerkanalyse?
                 </li>
                 <li>
-                    Three
+                    Grundlegende Begriffe und Konzepte
                 </li>
+                <li>Praktischer Teil</li>
             </ol>
         </div>
 
@@ -157,9 +158,8 @@
 
             <h1 class="red">02</h1>
             <h2 class="line-height-one-five">
-                Netzwerkanalyse
+                Was ist Netzwerkanalyse?
             </h2>
-            <h3 class="red up-25">Definitionen und Konzepte</h3>
 
         </div>
 
@@ -172,8 +172,8 @@
             Handlungsmöglichkeiten. <cite>(Jansen 2006, 11)</cite></blockquote>
 
             <blockquote class="substep down-50">[N]etworks permeate science, technology, business and nature to a much
-            higher degree than it may be evident upon a casual inspection [...] most networks are driven by common
-            organizing principles. <cite>(Barabási 2016, chapter 1)</cite></blockquote>
+            higher degree than it may be evident upon a casual inspection [...] most networks are driven by <span class="red">common
+            organizing principles</span>. <cite>(Barabási 2016, chapter 1)</cite></blockquote>
 
         </div>
 
@@ -195,14 +195,225 @@
 	    <div class="step">
 
 		    <h2>Was ist Netzwerkanalyse?</h2>
-		    <h3>statistisches Instrumentarium</h3>
+		    <h3>Statistisches Instrumentarium</h3>
 
 		    <ul>
+                <li>Statistik</li>
 			    <li>Matrix Algebra</li>
 			    <li>Graphentheorie</li>
+			    <li>Soziale Netzwerkanalyse</li>
 		    </ul>
 
 	    </div>
+
+        <div class="step">
+
+            <h2>Was ist Netzwerkanalyse <span class="red">nicht</span>?</h2>
+
+        </div>
+
+        <div class="step">
+
+            <div class="row">
+
+                <div class="six columns">
+                    <figure class="mfp-lightbox">
+                        <a href="resources/img/beil-01.jpg"><img src="resources/img/beil-01.jpg" alt="Verbreitungskarte urnenfelderzeitlicher Beile (Deicke 2011, 44 Abb. 42)"></a>
+                        <figcaption>(<a href="http://dx.doi.org/10.11588/jrgzm.2011.1.11418">Deicke 2011</a>, 44 Abb. 42)</figcaption>
+                    </figure>
+                </div>
+
+                <div class="six columns">
+                    <figure class="mfp-lightbox">
+                        <a href="resources/img/Grabung-1997-2010_NEU_ppt.jpg"><img src="resources/img/Grabung-1997-2010_NEU_ppt.jpg" alt="Plan des Gräberfelds von Künzing, Lkr. Deggendorf"></a>
+                        <figcaption>(<a href="http://dx.doi.org/10.11588/jrgzm.2011.1.11418">Deicke 2011</a>, 169 Plan 1)</figcaption>
+                    </figure>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="step">
+
+            <h2>Should you do network analysis?</h2>
+
+            <figure class="mfp-lightbox centered">
+
+                <a href="resources/img/shouldyoudonetworkanalysis.jpeg">
+                    <img style="width: 40%" src="resources/img/shouldyoudonetworkanalysis.jpeg" alt="Flowchart: Should I do network analysis? by Marten Düring, http://cvcedhlab.hypotheses.org/125">
+                </a>
+                <figcaption>(<a href="http://cvcedhlab.hypotheses.org/125">Düring 2015</a>)</figcaption>
+
+            </figure>
+
+        </div>
+
+        <div class="step">
+
+            <h1 class="red">03</h1>
+            <h2 class="line-height-one-five">
+                Grundlegende Begriffe und Konzepte
+            </h2>
+
+            <h3 class="small down-100">Glossare:</h3>
+            <ul class="x-small">
+                <li><a href="https://archaeologicalnetworks.wordpress.com/resources/#glossary">Collar, A., Coward, F., Brughmans, T., & Mills, B. J. (2015). Networks in Archaeology: Phenomena, Abstraction, Representation. Journal of Archaeological Method and Theory, 22, 1–32</a> </li>
+                <li><a href="cvcedhlab.hypotheses.org/106">M. Düring, Cheat Sheet: Social Network Analysis for Humanists (2015)</a> </li>
+            </ul>
+
+        </div>
+
+        <div class="step">
+
+            <h2>Das Netzwerk</h2>
+
+            <p>Abgegrenztes Set von Knoten und ein Set der für diese Knoten definierten Kanten, auch Graph</p>
+
+            <figure class="centered">
+                <img src="resources/img/HennigEtAl2012_109Abb19.png" title="Three alternative representations of the same graph" style="width: 60%;">
+                <figcaption class="push-down">Drei Darstellungen desselben Netzwerks (Hennig et al. 2012, 109 Abb. 19)</figcaption>
+            </figure>
+        </div>
+
+        <div class="step">
+
+            <h2>Knoten und Kanten</h2>
+
+            <div class="row">
+
+                <div class="six columns">
+                    <figure class="mfp-lightbox">
+                        <a href="resources/img/exampleNetwork.png"><img src="resources/img/exampleNetwork.png" alt="Beispielnetzwerk"></a>
+                    </figure>
+                </div>
+
+                <div class="six columns">
+                    <ul>
+                        <li>Knoten
+                            <ul>
+                                <li><em>node</em></li>
+                                <li>Kleinste separate Einheit, auch Akteur (Soziologie), Vertex, etc.</li>
+                            </ul>
+                        </li>
+                        <li>Kanten
+                            <ul>
+                                <li><em>edge</em></li>
+                                <li>Beziehung zwischen zwei Knoten, auch <em>tie</em>, <em>arc</em>, <em>link</em>, <em>relationship</em>, etc.</li>
+                                <li>Kann eine Richtung (<em>directed</em>) und/oder ein Gewicht haben (<em>weight</em>)</li>
+                            </ul>
+                        </li>
+                        <li>Attribute
+                            <ul>
+                                <li>Möglich auf Knoten und Kanten</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="step">
+
+			<h2>Teilgruppen in Netzwerken</h2>
+
+            <div class="row">
+
+                <div class="six columns">
+                    <figure class="mfp-lightbox">
+                        <a href="resources/img/Teilgruppen.png"><img src="resources/img/Teilgruppen.png" alt="Beispielnetzwerk"></a>
+                    </figure>
+                </div>
+
+                <div class="six columns">
+                    <ul>
+                        <li>Dyade
+                            <ul>
+                                <li>Kleinste mögliche Analyseeinheit eines Netzwerks: Alle möglichen Beziehungen zwischen zwei Knoten</li>
+                                <li>directed: M-A-N-Schema - <span class="red">M</span>utual, <span class="red">A</span>symmetric, <span class="red">N</span>ull (Dyadenzensus)</li>
+                            </ul>
+                        </li>
+                        <li>Triade
+                            <ul>
+                                <li>Alle möglichen Beziehungen zwischen drei Knoten</li>
+                                <li>directed: 16 Typen von möglichen Triaden (Triadenzensus)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Cliquen, n-Cliquen, k-Plexe, k-Cores, etc.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="step">
+
+            <h2>Ego- und Gesamtnetzwerke</h2>
+
+            <div class="row">
+
+                <div class="five columns">
+                    <figure class="mfp-lightbox">
+                        <a href="resources/img/ego_Flacius.png"><img src="resources/img/ego_Flacius.png"></a>
+                        <figcaption>Ego-Netzwerk (Tiefe: 1)</figcaption>
+                    </figure>
+                </div>
+
+                <div class="seven columns">
+                    <figure class="mfp-lightbox">
+                        <a href="resources/img/exampleNetwork.png"><img src="resources/img/exampleNetwork.png"></a>
+                        <figcaption>Gesamtnetzwerk</figcaption>
+                    </figure>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="step">
+
+            <h2>One- und Two-Mode-Netzwerke</h2>
+
+            <div class="row">
+
+                <div class="five columns">
+                    <figure class="mfp-lightbox">
+                        <a href="resources/img/2mode.png"><img src="resources/img/2mode.png"></a>
+                        <figcaption>Two-Mode-Netzwerk</figcaption>
+                    </figure>
+                </div>
+
+                <div class="seven columns">
+                    <figure class="mfp-lightbox">
+                        <a href="resources/img/1mode.png"><img src="resources/img/1mode.png"></a>
+                        <figcaption>One-Mode-Netzwerk</figcaption>
+                    </figure>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="step">
+            <h1 class="red">04</h1>
+            <h2 class="line-height-one-five">
+                Praktischer Teil
+            </h2>
+        </div>
+
+        <div class="step">
+
+            <h2>Maße</h2>
+
+            <p>Distanzmaße --> geodätischer Abstand</p>
+
+        </div>
 
         <div class="step">
             <div class="centered">
@@ -222,7 +433,7 @@
                     Barabási, Albert-László. 2016. Network Science. Cambridge: Cambridge Univer- sity Press. Accessed 12 January 2017. http://barabasi.com/networkscience- book/
                 </li>
                 <li>
-                    Two
+                    http://historicalnetworkresearch.org/
                 </li>
                 <li>
                     Three

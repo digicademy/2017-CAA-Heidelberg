@@ -16,12 +16,25 @@ blockquote cite {
 	float: right;
 }
 
+/* lists */
+
+li {
+	line-height: 1.3em;
+	text-indent: 0;
+}
+
+li:before {
+	left: -1em;
+	margin-left: -0.5em;
+}
+
 /* definition lists*/
 
 dl {
 	float: left;
 	width: 100%;
 	border-bottom: 1px solid #ccc;
+	margin-bottom: 50px;
 	line-height:1.5em;
 }
 
@@ -51,3 +64,12 @@ dd + dt {
 	margin-top: 0;
 }
 
+/* images */
+
+figure {
+	margin: 1em 0;
+}
+
+figcaption {
+	font-size: 16px;
+}
