@@ -73,3 +73,9 @@ figure {
 figcaption {
 	font-size: 16px;
 }
+
+/* extra stuff */
+
+.down-10 {
+	margin-top: 10px;
+}
