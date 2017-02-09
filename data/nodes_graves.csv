@@ -1,4 +1,4 @@
-n.id,n.name,n.group,n.ditch,n.burial
+id,name,group,ditch,burial
 G_1,Grab 1,south,none,feminin
 G_2,Grab 2,south,none,feminin/maskulin
 G_3,Grab 3,south,none,feminin

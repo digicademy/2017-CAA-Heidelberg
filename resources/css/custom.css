@@ -67,11 +67,12 @@ dd + dt {
 /* images */
 
 figure {
-	margin: 1em 0;
+	margin: 0;
 }
 
 figcaption {
 	font-size: 16px;
+	line-height: 1.3em;
 }
 
 /* extra stuff */
