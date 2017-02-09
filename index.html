@@ -117,11 +117,11 @@
             <h1>Ablaufplan</h1>
 
             <dl class="down-50">
-                <dt>14:00-15:00 Uhr</dt>
+                <dt>14:00–14:45 Uhr</dt>
                 <dd>Einführung, theoretische Grundlagen</dd>
-                <dt>15:00-15:15 Uhr</dt>
+                <dt>14:45–15:00 Uhr</dt>
                 <dd>Pause</dd>
-                <dt>15:15-17:00 Uhr</dt>
+                <dt>15:15–17:00 Uhr</dt>
                 <dd>Praktischer Teil</dd>
             </dl>
 
@@ -143,11 +143,8 @@
 
             <ul>
                 <li><a href="https://visone.info/html/download.html">Visone</a></li>
-                <li><a href="http://gephi.org/">Gephi</a></li>
                 <li><a href="http://de.libreoffice.org/">LibreOffice</a></li>
             </ul>
-
-            <!-- TODO: Notes: Alles OpenSource-->
 
         </div>
 
@@ -199,6 +196,7 @@
 			    <li>Matrix Algebra</li>
 			    <li>Graphentheorie</li>
 			    <li>Soziale Netzwerkanalyse</li>
+			    <li>Visualisierung</li>
 		    </ul>
 
 	    </div>
@@ -344,6 +342,34 @@
 				    </figure>
 			    </div>
 		    </div>
+	    </div>
+
+	    <div class="step">
+
+		    <h2 style="letter-spacing: -0.05rem">Roman bazaar or market economy?</h2>
+		    <h3 class="red up-25">Explaining tableware distributions through computational modelling</h3>
+
+		    <div class="row">
+			    <div class="six columns">
+
+				    <ul class="small">
+					    <li>Evaluation zweier theoretischer Modelle zur Verteilung römischer Keramik: Peter Bangs ‘Roman bazaar’ und Peter Temins ‘Roman market economy’ mit netzwerkanalytischen Methoden</li>
+					    <li>MERCURY: an agent-based computational model of tableware distribution</li>
+					    <li>Ergebnis: bestätigt die Bedeutung integrierter Märkte (Temin), zeigt jedoch auch die Bedeutung anderer, bisher unberücksichtigter Faktoren</li>
+					    <li>→ Kombination von Netzwerken und ABM zeigt neue Forschungsrichtung auf und macht Ergebnisse falsifizierbar</li>
+				    </ul>
+			    </div>
+
+			    <div class="five columns">
+				    <figure class="mfp-lightbox down-25">
+					    <a href="resources/img/BrughmansPoblome2016_401Fig4.png"><img src="resources/img/BrughmansPoblome2016_401Fig4.png"></a>
+					    <figcaption>Abstrakte Repräsentation der Netzwerkstruktur, die in MERCURY erstellt wird. a – wenig integrierte Märkte; b – hinzugefügte Kanten erzeugen in höherem Maß integrierte Märkte (Brughmans/Poblome 2016, 401 Abb. 4).</figcaption>
+				    </figure>
+			    </div>
+		    </div>
+
+		    <p class="small"><em><a href="https://doi.org/10.15184/aqy.2016.35">T. Brughmans/J. Poblome, Roman bazaar or market economy? Explaining tableware distributions through computational modelling. Antiquity, 90, 2016, 393-408</a></em>.</p>
+
 	    </div>
 
         <div class="step">
@@ -523,27 +549,11 @@
                 <div class="six columns">
                     <figure class="mfp-lightbox">
                         <a href="resources/img/datamodel.png"><img style="border: 1px solid #eee; padding: 0.5em; margin-top: -0.8em;" src="resources/img/datamodel.png" alt="Modell der Beispieldaten"></a>
-                        <figcaption>Datenmodell <!-- TODO: Updaten--></figcaption>
+                        <figcaption>Datenmodell | <a href="https://github.com/apcj/arrows">arrows</a> </figcaption>
                     </figure>
                 </div>
 
             </div>
-
-        </div>
-
-        <div class="step">
-
-	        <h2>Datengrundlage und -haltung</h2>
-
-	        <ul>
-		        <li>Formate: csv (<span class="red">c</span>omma <span class="red">s</span>eparated <span class="red">v</span>alues), <a href="http://graphml.graphdrawing.org/">graphML</a></li>
-		        <li>Datenhaltung in einer Datenbank ist grundsätzlich anzuraten</li>
-		        <li>Außerdem hilfreich: regular expressions, Tabellenprogramme</li>
-	        </ul>
-
-	        <p>Beispieldaten:</p>
-
-	        <p><a href="data/nodes_graves.csv">csv-Tabelle zu Eigenschaften der Gräber</a>t</p>
 
         </div>
 
@@ -554,7 +564,7 @@
             <ul>
                 <li>Two-Mode-Netzwerk:
                     <ul>
-	                    <li>Knoten: Gräber und Objekttypen</li>
+	                    <li>Knoten: Gräber und Objekttypen (Definition!)</li>
 	                    <li>Kanten: Vorkommen dieser Typen in Gräbern</li>
                     </ul>
                 </li>
@@ -574,6 +584,51 @@
         </div>
 
 	    <div class="step">
+
+		    <h2>Datengrundlage und -haltung: Grundlegendes</h2>
+
+		    <ul>
+			    <li>Formate: csv (<span class="red">c</span>omma <span class="red">s</span>eparated <span class="red">v</span>alues), <a href="http://graphml.graphdrawing.org/">graphML</a>, software-spezifische Formate</li>
+			    <li>Datenhaltung in einer Datenbank ist grundsätzlich anzuraten</li>
+			    <li>Außerdem hilfreich: regular expressions, Tabellenprogramme</li>
+			    <li>csv:
+				    <ul>
+					    <li>einfachstes Format, leicht lesbar, gut geeignet für Datenaustausch</li>
+					    <li>Spaltentrenner sollte möglichst nicht in Daten vorkommen</li>
+					    <li>"{content}" für Zellen mit komplexeren Inhalten</li>
+					    <li>kann mit jedem beliebigen Tabellenprogramm bearbeitet werden, außerdem mit Texteditoren</li>
+					    <li>Beispiel: <a href="https://raw.githubusercontent.com/digicademy/2017-CAA-Heidelberg/master/data/nodes_graves.csv?token=APdLWTrF6Y00ANVc49Dw4KJ1Bf9mZCDnks5YpX5awA%3D%3D">nodes_graves.csv</a></li>
+				    </ul>
+			    </li>
+		    </ul>
+
+	    </div>
+
+	    <div class="step">
+
+	        <h2>Datengrundlage: Beispieldaten (csv)</h2>
+
+		    <p>github: Ordner "<a href="https://github.com/digicademy/2017-CAA-Heidelberg/tree/master/data">data</a>"</p>
+
+		    <ul>
+			    <li>Kanten:
+			        <ul>
+				        <li><a href="data/edges_GravesObjectsMiddle.csv">edges_GravesObjectsMiddle.csv</a></li>
+				        <li><a href="data/edges_GravesObjectsNorth.csv">edges_GravesObjectsNorth.csv</a></li>
+				        <li><a href="data/edges_GravesObjectsSouth.csv">edges_GravesObjectsSouth.csv</a></li>
+			        </ul>
+			    </li>
+			    <li>Knoten:
+			        <ul>
+				        <li><a href="data/nodes_graves.csv">nodes_graves.csv</a></li>
+				        <li><a href="data/nodes_objects.csv">nodes_objects.csv</a></li>
+			        </ul>
+			    </li>
+		    </ul>
+
+	    </div>
+
+	    <div class="step">
 		    <h2>Software</h2>
 		    <table class="medium">
 			    <tr>
@@ -582,14 +637,14 @@
 			    </tr>
 			    <tr>
 				    <td><a href="https://gephi.org/">Gephi</a></td>
-				    <td>Alle Systeme, die Java und OpenGL unterstützen</td>
+				    <td style="width:60%;">Alle Systeme, die Java und OpenGL unterstützen</td>
 			    </tr>
 			    <tr>
 				    <td><a href="https://sites.google.com/site/ucinetsoftware/home">UCINET/NetDraw</a></td>
 				    <td>Windows; proprietär</td>
 			    </tr>
 			    <tr>
-				    <td><a href="http://visone.info/">Visone</a></td>
+				    <td><a href="http://visone.info/" style="border-bottom: 2px solid #C00000">Visone</a></td>
 				    <td>Alle Systeme, die Java unterstützen</td>
 			    </tr>
 			    <tr>
@@ -601,21 +656,98 @@
 				    <td>Windows</td>
 			    </tr>
 			    <tr>
-				    <td><a href="https://www.r-project.org/" title="The R Project for Statistical Computing">R</a> (<abbr title="Social Network Analysis">SNA</abbr> packages, z. B. <em><a href="http://igraph.org/r/">igraph</a></em> oder <em><a href="http://www.stats.ox.ac.uk/~snijders/siena/">RSiena</a></em>)</td>
+				    <td><a href="https://www.r-project.org/" title="The R Project for Statistical Computing">R</a> (SNA packages, z. B. <em><a href="http://igraph.org/r/">igraph</a></em> oder <em><a href="http://www.stats.ox.ac.uk/~snijders/siena/">RSiena</a></em>)</td>
 				    <td>Linux, Mac, Windows</td>
 			    </tr>
 		    </table>
+
+		    <ul>
+			    <li><a href="http://visone.info/wiki/images/6/67/VisoneTutorial-archeology.pdf">Visone-Tutorial (Tom Brughmans/Daniel Weidele) mit archäologischen Fachdaten</a> </li>
+			    <li><a href="https://groups.google.com/forum/#!forum/visone-users">Visone Google group</a></li>
+		    </ul>
+	    </div>
+
+	    <div class="step">
+		    <h2>Datenimport</h2>
+
+		    <h3>Kanten</h3>
+
+		    <ol>
+			    <li>File > Open > CSV files > select <a href="data/edges_GravesObjectsMiddle.csv">edges_GravesObjectsMiddle.csv</a></li>
+			    <li>Import Options:
+			        <ol>
+				        <li>Link list, two mode, header, no directed edges</li>
+				        <li>cell delimiter: ",", textframe: NONE </li>
+			        </ol>
+			    </li>
+		    </ol>
+
+		    <h3>Knotenattribute</h3>
+
+		    <ol>
+			    <li>Open attribute manager (<img src="resources/img/Attribute_manager.png" title="Icon attribute manager" style="height: 22px; width: 22px">) > import & export</li>
+			    <li>import file > Knotentabellen; network attribute = file attribute</li>
+			    <li>show & edit</li>
+		    </ol>
+	    </div>
+
+	    <div class="step">
+
+		    <h2>First steps: Label hinzufügen</h2>
+
+		    <ol>
+			    <li>visualization tab > category: mapping > type: label > property: node label</li>
+			    <li>attribute: name</li>
+			    <li>visualize</li>
+		    </ol>
+
+	    </div>
+
+	    <div class="step">
+		    <h2>Forschungsfrage definieren!</h2>
+
+		    <div class="substep">
+			    <p><!-- TODO: Schopper Hypothesen einfügen--></p>
+			    <p>z. B.: Können Unterschiede in der Netzwerkstruktur der einzelnen Gräbergruppen Hinweise auf Unterschiede in der Zusammensetzung der Gruppen geben?</p>
+			    <p><span class="red">→</span> Forschungsfrage beeinflusst untersuchte Eigenschaften und Netzwerke</p>
+		    </div>
+
+		    <div class="substep">
+			    <h3 class="down-100">Aufgabe</h3>
+
+			    <ol>
+				    <li>Daten importieren: <a href="data/edges_GravesObjectsNorth.csv">edges_GravesObjectsNorth.csv</a>, <a href="data/nodes_graves.csv">nodes_graves.csv</a>, <a href="data/nodes_objects.csv">nodes_objects.csv</a></li>
+				    <li>Label hinzufügen</li>
+			    </ol>
+
+		    </div>
 	    </div>
 
         <div class="step">
 
-            <h2>Grundlegende Netzwerkmaße</h2>
+            <h2>Analyse: Grundlegende Netzwerkmaße</h2>
 
-            <ul>
-                <li>Dichte</li>
-                <li>Entfernungsmaße / geodätischer Abstand</li>
-                <li>etc</li>
-            </ul>
+            <ol>
+                <li>Analysis tab > task: indexing > class: network > index: network statistics
+                    <ol>
+	                    <li>Dichte: Tatsächliche Anzahl der Kanten/Maximal mögliche Anzahl der Kanten</li>
+	                    <li>Durchschnittlicher Grad: durchschnittliche Anzahl an Kanten der Knoten im Netwzerk</li>
+	                    <li>Ein- und ausgehende Gradwerte: nur in gerichteten Netwzerken relevant</li>
+	                    <li>connected components: Anzahl der nicht miteinander verbundenen Teilnetzwerke</li>
+                    </ol>
+                </li>
+                <li>apply</li>
+                <li>attribute manager: network</li>
+            </ol>
+
+	        <div class="substep">
+		        <h3 class="down-50">Aufgabe</h3>
+
+		        <ol>
+			        <li>Netzwerkmaße für zweites Netzwerk berechnen</li>
+		        </ol>
+
+	        </div>
 
         </div>
 
@@ -633,6 +765,7 @@
 			            <li>Closeness Centrality (F, G)</li>
 			            <li>Eigenvector Centrality (D; F, G)</li>
 		            </ul>
+
 	            </div>
 
 	            <div class="six columns">
@@ -646,63 +779,181 @@
 
         </div>
 
+        <div class="step">
+
+	        <h2>Visone:</h2>
+
+	        <ol>
+		        <li>Analysis tab > task: indexing > class: node centrality > index: degree</li>
+		        <li>Attribute manager: node > show & edit</li>
+		        <li>Visualization tab > category: mapping > type: size > property: node area</li>
+	        </ol>
+
+	        <div class="substep">
+		        <h3 class="down-50">Aufgabe</h3>
+
+		        <ol>
+			        <li>Degree, Betweenness und Closeness für beide Netzwerke berechnen</li>
+		        </ol>
+
+	        </div>
+
+        </div>
+
+        <div class="step">
+
+	        <h2>Visualisierung: Farbe</h2>
+
+	        <ol>
+		        <li>Visualization tab > category: mapping > type: color > property: node color</li>
+		        <li>attribute: burial > method: color table > Optionen anpassen</li>
+		        <li>visualize</li>
+	        </ol>
+
+	        <div class="substep">
+		        <h3 class="down-50">Aufgabe</h3>
+
+		        <ol>
+			        <li>Ein Attribut des zweiten Netzwerks farbig markieren</li>
+		        </ol>
+
+	        </div>
+
+        </div>
+
+        <div class="step">
+
+	        <h2>Layout und Export</h2>
+
+	        <ol>
+		        <li>Layout
+		            <ol>
+			            <li>Visualization tab > category: layout > layout: node layout > node layout: spring embedder</li>
+			            <li>layout</li>
+			            <li><strong>Visualisierungen können irreführend sein!</strong> Immer kontextualisieren</li>
+		            </ol>
+		        </li>
+		        <li>Export
+		            <ol>
+			            <li>Als graphml/graphmlz: save or save as</li>
+			            <li>Als Graphik: file > export > pdf zu empfehlen, da Vektorformat</li>
+			            <li>Maße Knoten und Netzwerk: Attribute manager > import & export > csv (Dateiendung angeben)</li>
+		            </ol>
+		        </li>
+	        </ol>
+
+	        <div class="substep">
+		        <h3 class="down-50">Aufgabe</h3>
+
+		        <ol>
+			        <li>Knotenmaße für zweites Netzwerk exportieren</li>
+		        </ol>
+
+	        </div>
+
+        </div>
+
 	    <div class="step">
 
-		    <h2>Gerichtete Netzwerke: Prestige und Reziprozität</h2>
+		    <h2>Außerdem...</h2>
+
+		    <ul>
+			    <li>Maße für gerichtete Netwzerke, z. B. Prestige, Reziprozität</li>
+			    <li>Weitere Maße: Clustering, Triadenzensus, Gruppenanalyse, Blockmodellanalyse, Rollen und Positionen, geographische Visualisierung, ...</li>
+		    </ul>
+
+		    <h3 class="down-50">Wichtig:</h3>
+
+		    <ul>
+			    <li><strong>Kontextualisierung</strong>, Quellenkritik</li>
+			    <li>Maße nur anwenden, wenn Berechnung und Bedeutung klar </li>
+		    </ul>
+
+	    </div>
+
+	    <div class="step">
+
+			<h2>Und jetzt?</h2>
+
+			<div class="row">
+
+				<div class="eight columns">
+
+					<dl class="small">
+						<dt>14.-16.03.2017, Atlanta</dt>
+						<dd>AG CAA, Session "<a href="http://caaconference.org/program/sessions/#title3">Archaeological Networks: Uncertainty, Missing Data, and Statistical Inference</a>"</dd>
+						<dt>25.-26.05.2017, Augsburg</dt>
+						<dd>11. Workshop HNR: Stories und Strukturen: Faktuale und fiktionale Texte in der Historischen Netzwerkforschung (<a href="http://historicalnetworkresearch.org/hnr-events/workshop-series/cfp-the-11th-workshop-on-stories-and-structures/">CfP bis 01.03.2017</a>)</dd>
+						<dt>30.08.-03.09.2017, Maastricht</dt>
+						<dd><a href="http://www.eaa2017maastricht.nl/">EAA</a> 2017, Session "Archaeological networks and social interaction. Towards an application of network analysis and network concepts in social archaeology" (<a href="https://groups.google.com/d/msg/the-networks-network/oBT5lXL0TZ8/5zhwWW3-FgAJ">CfP bis 01.03.2017</a>)</dd>
+						<dt>26.-29.09.2017, Mainz</dt>
+						<dd>EUSN 2017: Third European Conference on Social Networks (<a href="http://www.academia.edu/31164430/CFP_Networks_in_Archaeology_and_History_EUSN_2017_">CfP bis 31.03.</a>)</dd>
+					</dl>
+
+				</div>
+
+				<div class="four columns up-10">
+					<h4>Online</h4>
+
+					<ul class="x-small">
+						<li><a href="http://connectedpast.net/">Connected Past</a></li>
+						<li><a href="https://groups.google.com/forum/#!forum/the-networks-network">The Networks Network</a></li>
+						<li><a href="http://historicalnetworkresearch.org/">HNR (Historical Network Research)</a></li>
+					</ul>
+				</div>
+
+			</div>
 
 	    </div>
 
         <div class="step">
-            <div class="centered">
-                <h1>F I N I S</h1>
-                <h2>Thank you</h2>
-            </div>
+
+            <h2>Literatur &amp; Software</h2>
+
+	        <div class="row">
+		        <div class="six columns">
+			        <h4>Abgekürzte Literatur</h4>
+			        <dl class="x-small" style="margin-bottom: 3.2em">
+				        <dt>Jansen 2006</dt>
+				        <dd>D. Jansen, Einführung in die Netzwerkanalyse. Grundlagen, Methoden, Forschungsbeispiele<sup>3</sup> (Wiesbaden 2006)</dd>
+				        <dt>Barabási 2016</dt>
+				        <dd><a href="http://barabasi.com/networksciencebook/">A.-L. Barabási, Network Science (Cambridge 2016), published in digital form</a></dd>
+			        </dl>
+
+			        <h4>Software</h4>
+
+			        <ul class="x-small">
+				        <li><a href="https://visone.info/html/download.html">Visone</a></li>
+				        <li><a href="http://de.libreoffice.org/">LibreOffice</a></li>
+			        </ul>
+
+			        <p class="down-50 x-small"><a href="http://digicademy.github.io/2017-CAA-Heidelberg/" title="Watch the presentation">Slides</a> | <a href="https://github.com/digicademy/2017-CAA-Heidelberg">Github</a> |  <a href="https://github.com/digicademy/2017-CAA-Heidelberg/tree/master/data">Daten</a> (mit Dank an F. Schopper)<br>
+				        License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>, <a href="http://www.adwmainz.de/mitarbeiter/profil/aline-deicke.html">Aline Deicke</a></p>
+		        </div>
+
+		        <div class="six columns">
+			        <h4>Weitere Literatur</h4>
+			        <ul class="x-small">
+				        <li><a href="http://uni-konstanz.academia.edu/TomBrughmans">Tom Brughmans</a></li>
+				        <li><a href="http://dx.doi.org/10.1007/s10816-014-9235-6">A. Collar/F. Coward/T. Brughmans/B. J. Mills, Networks in Archaeology: Phenomena, Abstraction, Representation. Journal of Archaeological Method and Theory 22, 2015, 1–32</a> (mit Glossar)</li>
+				        <li>S. Evans/K. Felder (Hrsg.), Social Network Perspectives in Archaeology. Arch. Rev. Cambridge 29, 1, 2014.</li>
+				        <li><a href="http://faculty.ucr.edu/%7Ehanneman/nettext/index.html">R. A. Hanneman/M. Riddle, Introduction to social network methods (Riverside 2005), published in digital form</a></li>
+				        <li>M. Hennig/U. Brandes/J. Pfeffer/I. Mergel (Hrsg.), Studying social networks. A guide to empirical research (Frankfurt a. M. 2012)</li>
+				        <li>C. Knappett (Hrsg.), Network Analysis in Archaeology. New Approaches to Regional Interaction (Oxford 2013)</li>
+				        <li><a href="http://dx.doi.org/10.1007/978-3-531-92575-2">Ch. Stegbauer/R. Häußling (Hrsg.), Handbuch Netzwerkforschung (Berlin 2010)</a></li>
+				        <li>Zeitschrift: <a href="http://www.sciencedirect.com/science/journal/03788733">Social Networks (ab 1979)</a></li>
+			        </ul>
+		        </div>
+	        </div>
+
         </div>
 
-        <div class="step">
-
-            <h2>Literature &amp; Software</h2>
-
-            <h4>Literature</h4>
-
-            <ul class="small">
-                <li>
-                    Barabási, Albert-László. 2016. Network Science. Cambridge: Cambridge Univer- sity Press. Accessed 12 January 2017. http://barabasi.com/networkscience- book/
-                </li>
-                <li>
-                    http://historicalnetworkresearch.org/
-                </li>
-                <li>
-                    Three
-                </li>
-            </ul>
-
-            <h4>Software</h4>
-
-            <ul class="small">
-                <li>
-                    One
-                </li>
-                <li>
-                   Two
-                </li>
-                <li>
-                    Three
-                </li>
-            </ul>
-
-            <h4>Download</h4>
-            <ul class="small">
-                <li>
-                    <a href="#">
-                        Link to presentation
-                    </a>
-                </li>
-                <li>
-                    License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>, Author
-                </li>
-            </ul>
-        </div>
+	    <div class="step">
+		    <div class="centered">
+			    <h1>D A N K E</h1>
+			    <h2>für Ihre/eure Aufmerksamkeit</h2>
+		    </div>
+	    </div>
 
     </div>
 

@@ -23,9 +23,24 @@ li {
 	text-indent: 0;
 }
 
-li:before {
+body ol {
+	counter-reset: item;
+}
+
+body li:before {
+	counter-increment: item;
 	left: -1em;
 	margin-left: -0.5em;
+}
+
+body ol li:before {
+	content: counter(item)" ";
+	margin-left: -0.9em;
+}
+
+ol ol li {
+	content: counter(item)" ";
+	padding-left: 0.6em;
 }
 
 /* definition lists*/
@@ -79,4 +94,8 @@ figcaption {
 
 .down-10 {
 	margin-top: 10px;
+}
+
+.up-10 {
+	margin-top: -10px;
 }
