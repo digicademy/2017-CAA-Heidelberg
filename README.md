@@ -10,6 +10,8 @@ Data and presentation for the tutorial "Archäologische Netzwerkanalyse – Mög
 
 The code of this boilerplate is at https://github.com/digicademy/2017-CAA-Heidelberg
 
-A live demo can be found at http://digicademy.github.io/2017-CAA-Heidelberg/
+The presentation can be found at http://digicademy.github.io/2017-CAA-Heidelberg/
+
+The data for this workshop was kindly provided by Franz Schopper, Brandenburgisches Landesamt für Denkmalpflege und Archäologisches Landesmuseum, from his publication "Das urnenfelder- und hallstattzeitliche Gräberfeld von Künzing, Lkr. Deggendorf (Niederbayern)" (F. Schopper, Das urnenfelder- und hallstattzeitliche Gräberfeld von Künzing, Lkr. Deggendorf [Niederbayern]. Mat. Bronzezeit Bayern 1 [Regensburg 1995].)
 
 Released under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), @digicademy
