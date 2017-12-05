@@ -1,1 +1,0 @@
-Data extracted from *F. Schopper, Das urnenfelder- und hallstattzeitliche Gräberfeld von Künzing, Lkr. Deggendorf (Niederbayern). Mat. Bronzezeit Bayern 1 (Regensburg 1995)*. Many thanks go to the author for approving the extraction and use in this context.
